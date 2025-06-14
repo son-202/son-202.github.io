@@ -1,33 +1,56 @@
 import streamlit as st
 
-# Danh sách tài khoản mẫu
-users = {
-    "admin": "123456",
-    "user": "password"
-}
+# Danh sách laptop mẫu
+laptops = [
+    {
+        "name": "Laptop ASUS VivoBook",
+        "price": 15990000,
+        "image": "https://cdn.tgdd.vn/Products/Images/44/305452/asus-vivobook-15-oled-a1505va-i5-l1298w-thumb-600x600.jpg"
+    },
+    {
+        "name": "Laptop Dell Inspiron",
+        "price": 17990000,
+        "image": "https://cdn.tgdd.vn/Products/Images/44/304495/dell-inspiron-15-3530-i5-71006208-thumb-600x600.jpg"
+    },
+    {
+        "name": "Laptop MacBook Air M2",
+        "price": 28990000,
+        "image": "https://cdn.tgdd.vn/Products/Images/44/289691/apple-macbook-air-13-inch-m2-2022-600x600.jpg"
+    }
+]
 
-def login(username, password):
-    if username in users and users[username] == password:
-        return True
-    return False
+# Session state cho giỏ hàng
+if "cart" not in st.session_state:
+    st.session_state.cart = []
 
-def main():
-    st.set_page_config(page_title="Login Page", page_icon="🔐", layout="centered")
+# Header
+st.set_page_config(page_title="Cửa Hàng Laptop", layout="wide")
+st.title("🛒 CỬA HÀNG LAPTOP ONLINE")
 
-    st.title("🔐 Đăng Nhập Hệ Thống")
+st.markdown("### Danh sách sản phẩm")
 
-    # Form đăng nhập
-    with st.form("login_form"):
-        username = st.text_input("👤 Tên đăng nhập")
-        password = st.text_input("🔑 Mật khẩu", type="password")
-        submitted = st.form_submit_button("Đăng nhập")
+# Hiển thị laptop theo dạng cột
+cols = st.columns(len(laptops))
 
-        if submitted:
-            if login(username, password):
-                st.success(f"✅ Chào mừng, {username}!")
-                st.balloons()
-            else:
-                st.error("❌ Sai tên đăng nhập hoặc mật khẩu.")
+for i, laptop in enumerate(laptops):
+    with cols[i]:
+        st.image(laptop["image"], width=200)
+        st.write(f"**{laptop['name']}**")
+        st.write(f"💵 Giá: {laptop['price']:,} VND")
+        if st.button(f"🛒 Thêm vào giỏ - {i}"):
+            st.session_state.cart.append(laptop)
+            st.success(f"Đã thêm **{laptop['name']}** vào giỏ hàng!")
 
-if __name__ == "__main__":
-    main()
+# Giỏ hàng
+st.markdown("---")
+st.markdown("## 🧺 Giỏ hàng")
+
+if st.session_state.cart:
+    total = 0
+    for item in st.session_state.cart:
+        st.write(f"- {item['name']} - 💵 {item['price']:,} VND")
+        total += item['price']
+    st.markdown(f"### ✅ Tổng cộng: **{total:,} VND**")
+else:
+    st.info("Giỏ hàng của bạn đang trống.")
+
