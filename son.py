@@ -5,7 +5,7 @@ laptops = [
     {
         "name": "Laptop ASUS VivoBook",
         "price": 15990000,
-        "image": "https://cdn.tgdd.vn/Products/Images/44/305452/asus-vivobook-15-oled-a1505va-i5-l1298w-thumb-600x600.jpg"
+        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.asus.com%2Fvn%2Flaptops%2Ffor-home%2Fvivobook%2Fvivobook-15-x1502%2F&psig=AOvVaw0HV3U8n3THg6VKP6mAkdgO&ust=1749967464323000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMjFlfye8I0DFQAAAAAdAAAAABAE"
     },
     {
         "name": "Laptop Dell Inspiron",
