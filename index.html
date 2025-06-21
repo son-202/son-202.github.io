@@ -1,124 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agriculture Website</title>
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #c4f8ff, #54fffc);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-    .login-box {
-      background: #00fe2a;
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
-      width: 360px;
-      text-align: center;
-    }
-
-    .profile-pic {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 20px;
-      border: 4px solid #ffffff;
-    }
-
-    .profile-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    h2 {
-      margin-bottom: 25px;
-      color: #0055fffa;
-      font-size: 20px;
-    }
-
-    .input-group {
-      position: relative;
-      margin-bottom: 20px;
-    }
-
-    .input-group i {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      color: #015ee9f4;
-    }
-
-    .input-group input {
-      width: 100%;
-      padding: 10px 10px 10px 35px;
-      border: 1px solid #0058fcdb;
-      border-radius: 6px;
-      font-size: 14px;
-      transition: border 0.3s;
-    }
-
-    .input-group input:focus {
-      border-color: #ec9d82;
-      outline: none;
-    }
-
-    .login-button {
-      background: #8af3ff;
-      color: rgb(249, 13, 13);
-      border: none;
-      padding: 10px;
-      width: 100%;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .login-button:hover {
-      background: #0592f7;
-    }
-
-    .footer {
-      margin-top: 20px;
-      font-size: 12px;
-      color: #f20000;
-    }
-  </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
-  <div class="login-box">
-    <div class="profile-pic">
-      <img src="son.jpg" alt="Profile Image">
+  <!-- HEADER -->
+  <header>
+    <nav class="navmenu">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/5900/5900287.png" alt="Logo" />
+        <span>AGRI CULTURE</span>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Blog</a></li>
+        <li class="dropdown">
+          <a href="#">Dropdown</a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown">
+              <a href="#">Deep Dropdown</a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <div class="container">
+    <div class="left-content">
+      <h1>Plants Make Life Better</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <ul>
+        <li><i class="fa-solid fa-check"></i> Fresh and Organic</li>
+        <li><i class="fa-solid fa-check"></i> Delivered with care</li>
+        <li><i class="fa-solid fa-check"></i> Eco-friendly practices</li>
+      </ul>
+      <button class="contact-button">GET IN TOUCH</button>
     </div>
-    <h2>Login to your account</h2>
+    <div class="right-content">
+      <img src="https://img.freepik.com/free-photo/farmer-working-field-holding-tablet_1150-18173.jpg" alt="Farmer" />
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <h2>SERVICES</h2>
+  <h3>Providing Fresh Produce Every Single Day</h3>
+  <div class="services">
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios/100/plant-under-sun--v1.png" alt="Planting">
+      <h4>Planting</h4>
+      <p>Healthy soil, healthy plants, healthy life.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios/100/hand-planting.png" alt="Mulching">
+      <h4>Mulching</h4>
+      <p>Keep moisture and nutrients where they belong.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios/100/tractor.png" alt="Plowing">
+      <h4>Plowing</h4>
+      <p>Breaking ground for better growth.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios/100/gardening.png" alt="Mowing">
+      <h4>Mowing</h4>
+      <p>Maintaining fields for optimal yield.</p>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+    <p>Stay updated with our latest farming tips and produce offers!</p>
     <form>
-      <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" placeholder="Username" value="guest">
-      </div>
-      <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" value="******">
-      </div>
-      <button type="submit" class="login-button">Login</button>
+      <input type="email" placeholder="Enter your email" />
+      <button type="submit">Subscribe</button>
     </form>
   </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Social</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <p>&copy; 2025 AGRI CULTURE. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
